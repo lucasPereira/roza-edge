@@ -1,0 +1,3 @@
+[submodule "subjects/university-system"]
+	path = subjects/university-system
+	url = git@github.com:lucasPereira/roza-subject-university-system.git
