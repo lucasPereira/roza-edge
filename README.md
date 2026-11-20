@@ -1,22 +1,13 @@
 # Róża Edge
 
-Róża Edge is a framework for automatic test code refactoring.
+Róża Edge is the new implementation of the test code refactoring framework
+developed for Lucas's doctorate.
 
-The first development stage compares Spoon and OpenRewrite by applying the same
-test refactoring to the university system subject.
-
-## Structure
-
-- `spikes` contains candidate technology implementations.
-- `subjects` contains pinned projects used to evaluate those implementations and
-  remains outside the root Gradle build.
-
-## Requirements
-
-- JDK 25
-
-## Build
+## Commands
 
 ```sh
-./gradlew check
+./gradlew test # Runs tests in all modules.
+./gradlew :spikes:test  # Runs the spike acceptance tests.
+./gradlew check # Runs tests and checks Java formatting in all modules.
+./gradlew :spikes:check # Runs tests and checks Java formatting in spikes.
 ```
