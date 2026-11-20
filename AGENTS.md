@@ -40,7 +40,10 @@ original content unchanged, even when a referenced file or section moves.
 Use ordinary links in prose for other connections rather than introducing
 additional relationship types.
 
-## Markdown formatting
+## Markdown documentation
+
+Do not duplicate explanations or rules across Markdown files. Keep each in one
+file and use links when another document needs to refer to it.
 
 Wrap prose at the last space that keeps each line within 80 characters. Treat
 inline code and Markdown links as indivisible units, moving them to the next line

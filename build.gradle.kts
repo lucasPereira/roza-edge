@@ -1,7 +1,22 @@
 import com.diffplug.gradle.spotless.SpotlessExtension
+import com.github.gradle.node.npm.task.NpxTask
 
 plugins {
+    base
+    id("com.github.node-gradle.node") version "7.1.0"
     id("com.diffplug.spotless") version "8.10.4" apply false
+}
+
+node {
+    version = "24.22.3"
+    download = true
+}
+
+val markdownLint = tasks.register<NpxTask>("markdownLint") {
+    group = "verification"
+    description = "Checks Markdown formatting."
+    command = "markdownlint-cli2@0.24.2"
+    environment.put("npm_config_yes", "true")
 }
 
 allprojects {
@@ -37,4 +52,9 @@ subprojects {
     tasks.withType<Test>().configureEach {
         useJUnitPlatform()
     }
+}
+
+tasks.check {
+    dependsOn(markdownLint)
+    dependsOn(subprojects.map { it.tasks.named("check") })
 }

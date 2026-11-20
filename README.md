@@ -5,9 +5,22 @@ developed for Lucas's doctorate.
 
 ## Commands
 
+### Tests
+
 ```sh
 ./gradlew test # Runs tests in all modules.
-./gradlew :spikes:test  # Runs the spike acceptance tests.
-./gradlew check # Runs tests and checks Java formatting in all modules.
+./gradlew :spikes:test # Runs the spike tests.
+```
+
+### Checks
+
+```sh
+./gradlew check # Runs all module checks and Markdown linting.
 ./gradlew :spikes:check # Runs tests and checks Java formatting in spikes.
+```
+
+### Markdown linting
+
+```sh
+./gradlew markdownLint # Checks Markdown formatting only.
 ```
