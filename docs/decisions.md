@@ -151,6 +151,8 @@ verify the project. Linting reports issues without modifying files.
 Markdown linting includes Róża Edge's documentation and the hypothetical systems
 we create for spikes and experiments, including `subjects/university-system`
 and future systems of this kind. Only third-party subjects outside our control
-are added to the lint exclusions. Git-ignored files remain excluded throughout.
-The prose line limit is 80 characters; headings, tables, and code blocks retain
-their existing layout conventions.
+are added to the lint exclusions. Each future third-party subject requires an
+explicit path entry in the `ignores` array of the
+[lint configuration](../.markdownlint-cli2.jsonc) when introduced. Git-ignored
+files remain excluded throughout. The prose line limit is 80 characters;
+headings, tables, and code blocks retain their existing layout conventions.

@@ -45,14 +45,16 @@ additional relationship types.
 Do not duplicate explanations or rules across Markdown files. Keep each in one
 file and use links when another document needs to refer to it.
 
-Wrap prose at the last space that keeps each line within 80 characters. Treat
-inline code and Markdown links as indivisible units, moving them to the next line
-when needed; allow a longer line only when a unit cannot fit within the limit.
-Separate paragraphs with one blank line. When editing a paragraph, rewrap the
-whole paragraph so earlier line breaks do not leave unnecessarily short lines.
+When editing prose, rewrap the entire paragraph at the last available space
+within the configured line-length limit. Treat inline code and Markdown links as
+indivisible units, moving them to the next line when needed; allow a longer line
+only when a unit cannot fit within the limit. Separate paragraphs with one blank
+line.
 
-Preserve the layout of headings, tables, fenced code blocks, and standalone
-relationship links rather than applying prose wrapping to them.
+Apply paragraph wrapping only to prose. Keep headings, table rows, and decision
+relationship items on individual lines, and preserve indentation and line breaks
+inside fenced code blocks. Their content can still be edited without applying
+paragraph wrapping to these structures.
 
 ## Code readability
 
